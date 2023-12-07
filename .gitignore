@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/*
+/webapi/bin/*
+/angularapp/obj/*
+/webapi/obj/*
+/angularapp/package-lock.json
+/.vs/scoggFixinThingsApp/*
