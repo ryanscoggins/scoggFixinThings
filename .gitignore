@@ -8,3 +8,9 @@
 /webapi/obj/*
 /angularapp/package-lock.json
 /.vs/scoggFixinThingsApp/*
+/.vs/scoggFixinThings/v17/.wsuo
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
+/webapi/.config/dotnet-tools.json
+/webapi/Properties/*
+/webapi/webapi.csproj.user
