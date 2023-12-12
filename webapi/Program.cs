@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-using System.Configuration;
 using webapi;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,7 +11,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DatabaseContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnectionString"));
+    options.UseMySql(builder.Configuration.GetConnectionString("DbConnectionString"), ServerVersion.Parse("10.6.14-mariadb"));
 });
 
 var app = builder.Build();

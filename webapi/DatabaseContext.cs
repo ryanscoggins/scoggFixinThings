@@ -9,7 +9,7 @@ namespace webapi
         public DbSet<User> Users { get; set; }
         public DatabaseContext(DbContextOptions options) : base(options)
         {
-            
         }
+
     }
 }
