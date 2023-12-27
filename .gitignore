@@ -14,3 +14,4 @@
 /webapi/.config/dotnet-tools.json
 /webapi/Properties/*
 /webapi/webapi.csproj.user
+/site/.vs/site/v17/.suo
