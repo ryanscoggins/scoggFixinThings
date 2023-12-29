@@ -16,6 +16,28 @@ builder.Services.AddDbContext<DatabaseContext>(options =>
 
 var app = builder.Build();
 
+app.Use(async (context, next) =>
+
+{
+
+    await next();
+
+    if (context.Response.StatusCode == 404 && !System.IO.Path.HasExtension(context.Request.Path.Value))
+
+    {
+
+        context.Request.Path = "/index.html";
+
+        await next();
+
+    }
+
+});
+
+app.UseDefaultFiles();
+
+app.UseStaticFiles();
+
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
