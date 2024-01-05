@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using sftBackendApp.Models;
 
 namespace sftBackendApp.Controllers
 {
@@ -12,22 +14,20 @@ namespace sftBackendApp.Controllers
     };
 
         private readonly ILogger<WeatherForecastController> _logger;
+        private readonly DatabaseContext _context;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, DatabaseContext context)
         {
             _logger = logger;
+            _context = context;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        [HttpGet(Name = "GetPosts")]
+        public List<User> Get()
         {
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            var posts = new List<User>();
+            posts = _context.Users.ToList();
+            return posts;
         }
     }
 }

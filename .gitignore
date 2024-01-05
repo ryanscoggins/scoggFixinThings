@@ -20,4 +20,6 @@
 /sftBackendApp/.vs/*
 /sftBackendApp/bin/*
 /sftBackendApp/obj/*
-/sftBackendApp/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/sftBackendApp/.vs/sftBackendApp/v17/.suo
+/sftBackendApp/sftBackendApp.csproj
+/sftBackendApp/bin/Debug/*
