@@ -15,3 +15,9 @@
 /webapi/Properties/*
 /webapi/webapi.csproj.user
 /site/.vs/site/v17/.suo
+/angularApp/.vs/angularApp/v17/.suo
+/angularApp/angularApp.esproj.user
+/sftBackendApp/.vs/*
+/sftBackendApp/bin/*
+/sftBackendApp/obj/*
+/sftBackendApp/bin/Debug/net7.0/Swashbuckle.AspNetCore.SwaggerGen.dll
