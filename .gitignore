@@ -26,3 +26,5 @@
 /sftBackendApp/Properties/*
 /sftBackendApp/.vs/*
 /scoggFixinThingsApp/ClientApp/.angular/cache/*
+/webapi/webapi.csproj
+/webapi/appsettings.json
