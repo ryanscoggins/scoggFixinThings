@@ -25,3 +25,4 @@
 /sftBackendApp/bin/Debug/*
 /sftBackendApp/Properties/*
 /sftBackendApp/.vs/*
+/scoggFixinThingsApp/ClientApp/.angular/cache/*
