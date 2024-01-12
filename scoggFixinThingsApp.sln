@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.7.34302.85
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "angularapp", "angularapp\angularapp.esproj", "{294039CF-7990-4ABC-846A-9A17EF32F893}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ABAC85FB-6A5F-46AB-A0F5-15B5E8A25D01} = {ABAC85FB-6A5F-46AB-A0F5-15B5E8A25D01}
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webapi", "webapi\webapi.csproj", "{ABAC85FB-6A5F-46AB-A0F5-15B5E8A25D01}"
 EndProject

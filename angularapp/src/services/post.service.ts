@@ -16,6 +16,6 @@ export class PostService {
 
   //get all posts
   getPosts() {
-    return this.http.get<Post[]>(this.apiUrl)
+    return this.http.get<Post[]>(this.apiUrl + '/Post')
   }
 }
