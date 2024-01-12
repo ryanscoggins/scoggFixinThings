@@ -1,5 +1,6 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { Post } from 'src/interfaces/post.interface';
+import { PostService } from 'src/services/post.service';
 
 @Component({
   selector: 'app-root',
@@ -7,20 +8,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public forecasts?: WeatherForecast[];
+  constructor(
+    private postService: PostService
+  ) {};
+   title = 'angularapp';
 
-  constructor(http: HttpClient) {
-    http.get<WeatherForecast[]>('/weatherforecast').subscribe(result => {
-      this.forecasts = result;
-    }, error => console.error(error));
-  }
+   posts: Post[] = [];
 
-  title = 'angularapp';
-}
-
-interface WeatherForecast {
-  date: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
+   ngOnInit(): void {
+    this.postService.getPosts().subscribe((data) =>
+      this.posts = data
+    )
+    console.log('testing')
+    console.log(this.posts)
+   }
 }
