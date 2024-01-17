@@ -19,7 +19,5 @@ export class AppComponent {
     this.postService.getPosts().subscribe((data) =>
       this.posts = data
     )
-    console.log('testing')
-    console.log(this.posts)
    }
 }

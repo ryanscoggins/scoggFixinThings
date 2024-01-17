@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+.header {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: blue;
+  }
