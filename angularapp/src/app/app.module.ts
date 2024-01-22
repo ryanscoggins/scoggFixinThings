@@ -1,13 +1,6 @@
-import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
-
+//Components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-
-//PrimeNG modules
-import { ButtonModule } from 'primeng/button';
 import { LivingRoomComponent } from './components/living-room/living-room.component';
 import { KitchenComponent } from './components/kitchen/kitchen.component';
 import { BathroomComponent } from './components/bathroom/bathroom.component';
@@ -16,6 +9,13 @@ import { BedroomComponent } from './components/bedroom/bedroom.component';
 import { OtherComponent } from './components/other/other.component';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component'
+
+//Modules
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
