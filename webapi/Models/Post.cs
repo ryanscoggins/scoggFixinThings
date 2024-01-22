@@ -11,5 +11,6 @@
         public DateTime? UpdateDate { get; set; }
         public DateTime? PublishDate { get; set; }
         public virtual User Author { get; set; }
+        public string Location { get; set; }
     }
 }

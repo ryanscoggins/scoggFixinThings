@@ -4,7 +4,7 @@ using webapi.Models;
 namespace webapi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class PostController : ControllerBase
     {
         private readonly ILogger<PostController> _logger;
@@ -20,6 +20,13 @@ namespace webapi.Controllers
         public List<Post> GetAllPosts()
         {
             List<Post>? posts = _context.Posts.ToList();
+            return posts;
+        }
+
+        [HttpGet]
+        public List<Post> GetPostsByLocation(string location)
+        {
+            List<Post>? posts = _context.Posts.Where(p => p.Location == location).ToList();
             return posts;
         }
     }
