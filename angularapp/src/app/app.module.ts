@@ -16,7 +16,8 @@ import { DiningRoomComponent } from './components/dining-room/dining-room.compon
 import { BedroomComponent } from './components/bedroom/bedroom.component';
 import { OtherComponent } from './components/other/other.component';
 import { AboutComponent } from './components/about/about.component';
-import { HomeComponent } from './components/home/home.component'
+import { HomeComponent } from './components/home/home.component';
+import { PostPreviewComponent } from './components/post-preview/post-preview.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { HomeComponent } from './components/home/home.component'
     BedroomComponent,
     OtherComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    PostPreviewComponent
   ],
   imports: [
     //Router

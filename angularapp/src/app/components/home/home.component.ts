@@ -12,11 +12,11 @@ export class HomeComponent {
     private postService: PostService
   ) {};
   
-  posts: Post[] = [];
+  allPosts: Post[] = [];
 
   ngOnInit(): void {
     this.postService.getPosts().subscribe((data) =>
-      this.posts = data
+      this.allPosts = data
     )
    }
 }
