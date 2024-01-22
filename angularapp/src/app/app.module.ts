@@ -16,6 +16,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
+import { PostPreviewComponent } from './components/post-preview/post-preview.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ButtonModule } from 'primeng/button';
     BedroomComponent,
     OtherComponent,
     AboutComponent,
-    HomeComponent
+    HomeComponent,
+    PostPreviewComponent
   ],
   imports: [
     //Router
