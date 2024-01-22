@@ -1,3 +1,11 @@
+//Modules
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
+import { ButtonModule } from 'primeng/button';
+import { CardModule } from 'primeng/card';
+
 //Components
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -10,14 +18,6 @@ import { OtherComponent } from './components/other/other.component';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component'
 
-//Modules
-import { HttpClientModule } from '@angular/common/http';
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouterModule } from '@angular/router';
-import { ButtonModule } from 'primeng/button';
-import { PostPreviewComponent } from './components/post-preview/post-preview.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,8 +29,7 @@ import { PostPreviewComponent } from './components/post-preview/post-preview.com
     BedroomComponent,
     OtherComponent,
     AboutComponent,
-    HomeComponent,
-    PostPreviewComponent
+    HomeComponent
   ],
   imports: [
     //Router
@@ -45,7 +44,7 @@ import { PostPreviewComponent } from './components/post-preview/post-preview.com
       {path: 'other', component: OtherComponent},
     ]),
     //Imports
-    BrowserModule, HttpClientModule, ButtonModule
+    BrowserModule, HttpClientModule, ButtonModule, CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
