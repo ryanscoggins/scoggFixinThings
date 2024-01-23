@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Post } from 'src/interfaces/post.interface'
 import { environment } from 'src/environments/environment';
@@ -19,7 +19,9 @@ export class PostService {
     return this.http.get<Post[]>(this.apiUrl + '/GetAllPosts')
   }
 
-  getPostsByLocation() {
-    return this.http.get<Post[]>(this.apiUrl + '/Post')
+  //get posts by location
+  getPostsByLocation(location: string) {
+    let params = new HttpParams().set("location", location)
+    return this.http.get<Post[]>(this.apiUrl + '/GetPostsByLocation', {params: params})
   }
 }
