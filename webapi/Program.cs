@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using webapi;
 
+var allowedOrigins = "_allowedOrigins";
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -11,6 +12,16 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("sftDb")));
 
+builder.Services.AddCors(opt =>
+{
+    opt.AddPolicy(name: allowedOrigins, builder =>
+    {
+        builder.WithOrigins("https://localhost:4200")
+        .SetIsOriginAllowed((host) => true)
+        .AllowAnyHeader()
+        .AllowAnyMethod();
+    });
+});
 
 var app = builder.Build();
 
@@ -26,5 +37,7 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors(allowedOrigins);
 
 app.Run();
