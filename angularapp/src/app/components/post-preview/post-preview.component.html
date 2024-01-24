@@ -4,6 +4,6 @@
             {{post.content.slice(0, 500)}}
             <span> ...</span>
         </p>
-        <p-button>Read More</p-button>
+        <p-button (onClick)="openPost(post.id)">Read More</p-button>
     </p-card>
 </div>
