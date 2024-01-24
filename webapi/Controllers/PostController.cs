@@ -29,5 +29,12 @@ namespace webapi.Controllers
             List<Post>? posts = _context.Posts.Where(p => p.Location == location).ToList();
             return posts;
         }
+
+        [HttpGet]
+        public Post? GetIndividualPost(int postId)
+        {
+            Post? post = _context.Posts.Where(p => p.Id == postId).FirstOrDefault();
+            return post;
+        }
     }
 }

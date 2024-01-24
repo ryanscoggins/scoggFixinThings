@@ -24,4 +24,10 @@ export class PostService {
     let params = new HttpParams().set("location", location)
     return this.http.get<Post[]>(this.apiUrl + '/GetPostsByLocation', {params: params})
   }
+
+  //get individual post by id
+  getIndividualPost(postId: number) {
+    let params = new HttpParams().set("postId", postId)
+    return this.http.get<Post>(this.apiUrl + '/GetIndividualPost', {params: params})
+  }
 }

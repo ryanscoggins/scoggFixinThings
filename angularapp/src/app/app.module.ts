@@ -17,7 +17,8 @@ import { BedroomComponent } from './components/bedroom/bedroom.component';
 import { OtherComponent } from './components/other/other.component';
 import { AboutComponent } from './components/about/about.component';
 import { HomeComponent } from './components/home/home.component';
-import { PostPreviewComponent } from './components/post-preview/post-preview.component'
+import { PostPreviewComponent } from './components/post-preview/post-preview.component';
+import { PostComponent } from './components/post/post.component'
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { PostPreviewComponent } from './components/post-preview/post-preview.com
     OtherComponent,
     AboutComponent,
     HomeComponent,
-    PostPreviewComponent
+    PostPreviewComponent,
+    PostComponent
   ],
   imports: [
     //Router
@@ -44,6 +46,7 @@ import { PostPreviewComponent } from './components/post-preview/post-preview.com
       {path: 'dining', component: DiningRoomComponent},
       {path: 'about', component: AboutComponent},
       {path: 'other', component: OtherComponent},
+      {path: 'post/:postId', component: PostComponent}
     ]),
     //Imports
     BrowserModule, HttpClientModule, ButtonModule, CardModule

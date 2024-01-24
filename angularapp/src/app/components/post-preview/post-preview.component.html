@@ -1,7 +1,9 @@
 <div *ngFor="let post of posts">
     <p-card class="card" header={{post.title}} subheader={{post.summary}}>
         <p>
-            {{post.content}}
+            {{post.content.slice(0, 500)}}
+            <span> ...</span>
         </p>
+        <p-button>Read More</p-button>
     </p-card>
 </div>
