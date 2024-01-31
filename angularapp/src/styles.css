@@ -1,13 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
 @import "node_modules/primeng/resources/primeng.min.css";
 @import "node_modules/primeng/resources/themes/lara-light-blue/theme.css";
+
+body {background-color:#364897;}
+
 .header {
-    /* position: fixed; */
     width: 100%;
     display: flex;
-    padding: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
     justify-content: space-between;
     z-index: 9999;
     top: 0;
     left: 0;
   }
+
+.post-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.post-preview {
+  width: 40vw;
+  margin: 5px;
+}
+
+.p-button {
+  transition: color 0.1s
+}
+
+.header .p-button {
+  background:none;
+  border: none;
+}
+
+.header .p-button:hover {
+  color:black;
+  background: none;
+}
+
+.post-preview .p-button {
+  background:blue;
+  border: none;
+}

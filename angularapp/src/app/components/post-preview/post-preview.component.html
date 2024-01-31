@@ -1,9 +1,11 @@
-<div *ngFor="let post of posts">
-    <p-card class="card" header={{post.title}} subheader={{post.summary}}>
-        <p>
-            {{post.content.slice(0, 500)}}
-            <span> ...</span>
-        </p>
-        <p-button (onClick)="openPost(post.id)">Read More</p-button>
-    </p-card>
+<div class="post-container">
+    <div class="post-preview" *ngFor="let post of posts">
+        <p-card header={{post.title}} subheader={{post.summary}}>
+            <p>
+                {{post.content.slice(0, 500)}}
+                <span *ngIf="post.content.length>500"> ...</span>
+            </p>
+            <p-button class="preview-button" (onClick)="openPost(post.id)">Read More</p-button>
+        </p-card>
+    </div>
 </div>
