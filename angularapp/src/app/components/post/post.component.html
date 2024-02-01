@@ -1,1 +1,5 @@
-<p>showing data for the post: {{post.title}}</p>
+<div class='center'>
+    <h1>{{post.title}}</h1>
+    <h2>{{post.summary}}</h2>
+    <div [innerHTML]="post.content"></div>
+</div>

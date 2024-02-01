@@ -2,8 +2,8 @@
     <div class="post-preview" *ngFor="let post of posts">
         <p-card header={{post.title}} subheader={{post.summary}}>
             <p>
-                {{post.content.slice(0, 500)}}
-                <span *ngIf="post.content.length>500"> ...</span>
+                {{post.summary.slice(0, 500)}}
+                <span *ngIf="post.summary.length>500"> ...</span>
             </p>
             <p-button class="preview-button" (onClick)="openPost(post.id)">Read More</p-button>
         </p-card>
