@@ -15,10 +15,6 @@
     left: 0;
   }
   
-/* .headerButtons { */
- /* float:right */
-/* } */
-
 .post-container {
   display: flex;
   flex-wrap: wrap;
@@ -38,6 +34,7 @@
 .header .p-button {
   background:none;
   border: none;
+  box-shadow: none;
 }
 
 .header .p-button:hover {
@@ -55,9 +52,8 @@
   width: 50%;
   border: 3px solid black;
   padding: 10px;
-  /* text-align: center; */
 }
 
-.active {
-  background-color:black
+.active .p-button {
+  text-decoration: underline;
 }
