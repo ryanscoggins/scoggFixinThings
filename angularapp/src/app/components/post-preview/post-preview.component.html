@@ -1,4 +1,5 @@
 <div class="post-container">
+    <ng-container *ngIf="posts.length > 0; else noPosts"></ng-container>
     <div class="post-preview" *ngFor="let post of posts">
         <p-card header={{post.title}} subheader={{post.summary}}>
             <p>
@@ -8,4 +9,7 @@
             <p-button class="preview-button" (onClick)="openPost(post.id)">Read More</p-button>
         </p-card>
     </div>
+    <ng-template #noPosts>
+        No Posts Yet!
+    </ng-template>
 </div>

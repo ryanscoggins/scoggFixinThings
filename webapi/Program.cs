@@ -10,7 +10,12 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("sftDb")));
+builder.Services.AddDbContext<DatabaseContext>(
+    options => options.UseSqlServer(builder.Configuration.GetConnectionString("sftDb"), builder =>
+    {
+        builder.EnableRetryOnFailure(5, TimeSpan.FromSeconds(10), null);
+    }
+    ));
 
 builder.Services.AddCors(opt =>
 {
