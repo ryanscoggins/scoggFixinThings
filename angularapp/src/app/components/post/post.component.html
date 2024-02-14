@@ -2,4 +2,9 @@
     <h1>{{post.title}}</h1>
     <h2>{{post.summary}}</h2>
     <div [innerHTML]="post.content"></div>
+    <p-galleria [value]="images">
+        <ng-template pTemplate="item" let-item>
+            <img [src]="item.imageLink" />
+        </ng-template>
+    </p-galleria>
 </div>

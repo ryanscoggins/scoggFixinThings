@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
+import { GalleriaModule } from 'primeng/galleria';
 
 //Components
 import { AppComponent } from './app.component';
@@ -49,7 +50,7 @@ import { PostComponent } from './components/post/post.component'
       {path: 'post/:postId', component: PostComponent}
     ]),
     //Imports
-    BrowserModule, HttpClientModule, ButtonModule, CardModule
+    BrowserModule, HttpClientModule, ButtonModule, CardModule, GalleriaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
