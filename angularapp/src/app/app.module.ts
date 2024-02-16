@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { GalleriaModule } from 'primeng/galleria';
+import { MenubarModule } from 'primeng/menubar';
 
 //Components
 import { AppComponent } from './app.component';
@@ -50,7 +51,7 @@ import { PostComponent } from './components/post/post.component'
       {path: 'post/:postId', component: PostComponent}
     ]),
     //Imports
-    BrowserModule, HttpClientModule, ButtonModule, CardModule, GalleriaModule
+    BrowserModule, HttpClientModule, ButtonModule, CardModule, GalleriaModule, MenubarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-<div class="header">
+<div class="header for-desktop">
     <img width=100px src="assets\sftPlaceholder.jpg" routerLink="/" class="logo">
     <div>
         <p-button routerLink="/" label="Home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"></p-button>
@@ -10,4 +10,8 @@
         <p-button routerLink="/other" label="Other" routerLinkActive="active"></p-button>
         <p-button routerLink="/about" label="About" routerLinkActive="active"></p-button>
     </div>
+</div>
+<div class="menu for-mobile">
+    <img width=100px src="assets\sftPlaceholder.jpg" routerLink="/" class="logo">
+    <p-menubar [model]="tabs"></p-menubar>
 </div>

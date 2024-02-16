@@ -18,6 +18,32 @@
     max-height: 100px;
   }
 
+.menu {
+  width: 100%;
+}
+
+.p-menubar {
+  background: none;
+  border: none;
+  float: right;
+  position: relative;
+}
+
+/* .p-menubar-root-list { */
+  /* overflow: visible; */
+/* } */
+
+.p-menubar.p-menubar-mobile-active .p-menubar-root-list {
+  position:absolute;
+  top: 100%;
+  width: 33vw;
+}
+
+.p-menubar.p-menubar-mobile-active .p-menubar-root-list:last-of-type {
+  right: 0;
+  left:auto;
+}
+
 .container {
   padding-top: 100px;
 }
@@ -90,4 +116,16 @@
 
 .logo:hover {
   cursor: pointer;
+}
+
+@media(max-width:768px){
+  .for-desktop{
+    display:none
+  }
+}
+
+@media(min-width:768px){
+  .for-mobile{
+    display:none
+  }
 }
