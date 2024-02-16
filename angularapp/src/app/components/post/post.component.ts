@@ -16,7 +16,23 @@ export class PostComponent {
     private imageService: ImageService
   ) {}
 
-  post!: Post;
+  post: Post = {
+    id: '',
+    title: '',
+    summary: '',
+    content: '',
+    createDate: '',
+    updateDate: '',
+    publishDate: '',
+    author: {
+      id: '',
+      firstName: '',
+      lastName: '',
+      email: '',
+      createDate: '',
+      profile: ''
+    }
+  };
   images!: Image[];
 
   ngOnInit(): void {

@@ -11,7 +11,23 @@ export class PostPreviewComponent {
     private router: Router
   ) {}
 
-  @Input() posts!: Post[]
+  @Input() posts: Post[] = [{
+    id: '',
+    title: '',
+    summary: '',
+    content: '',
+    createDate: '',
+    updateDate: '',
+    publishDate: '',
+    author: {
+      id: '',
+      firstName: '',
+      lastName: '',
+      email: '',
+      createDate: '',
+      profile: ''
+    }
+  }]
 
   openPost(postId: string) {
     this.router.navigate([`post/${postId}`])
