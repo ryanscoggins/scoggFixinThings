@@ -11,10 +11,16 @@
     padding: 10px;
     margin-bottom: 20px;
     justify-content: space-between;
-    z-index: 9999;
+    position:fixed;
+    z-index: 1;
     top: 0;
     left: 0;
+    background:white;
   }
+
+.container {
+  padding-top: 7%;
+}
   
 .post-container {
   display: flex;
