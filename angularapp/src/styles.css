@@ -44,7 +44,6 @@
 }
 
 .post-preview .p-button {
-  background:blue;
   border: none;
 }
 
@@ -81,4 +80,8 @@
 
 .p-galleria .p-galleria-thumbnail-container .p-galleria-thumbnail-prev:hover {
   color: gray
+}
+
+.logo:hover {
+  cursor: pointer;
 }
