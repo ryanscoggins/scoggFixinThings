@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using webapi.Models;
 
 namespace webapi.Controllers
@@ -19,7 +20,7 @@ namespace webapi.Controllers
         [HttpGet]
         public List<Post> GetAllPosts()
         {
-            List<Post>? posts = _context.Posts.ToList();
+            List<Post>? posts = _context.Posts.Include(p => p.Images).ToList();
             return posts;
         }
 

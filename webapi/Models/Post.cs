@@ -12,5 +12,6 @@
         public DateTime? PublishDate { get; set; }
         public virtual User Author { get; set; }
         public string Location { get; set; }
+        public virtual ICollection<Image> Images { get; set; }
     }
 }

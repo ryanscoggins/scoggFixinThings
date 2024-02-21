@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 using webapi;
 
 var allowedOrigins = "_allowedOrigins";
@@ -27,6 +28,13 @@ builder.Services.AddCors(opt =>
         .AllowAnyMethod();
     });
 });
+
+builder.Services.AddControllers()
+    // Allows the API to return child classes like User with UserSettings
+    .AddJsonOptions(options =>
+    {
+        options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+    });
 
 var app = builder.Build();
 

@@ -16,7 +16,7 @@ namespace webapi.Controllers
         [HttpGet]
         public List<Image> GetImagesByPostId(int postId)
         {
-            List<Image>? images = _context.Images.Where(i => i.Post.Id == postId).ToList();
+            List<Image>? images = _context.Images.Where(i => i.PostId == postId).ToList();
             return images;
         }
     }
