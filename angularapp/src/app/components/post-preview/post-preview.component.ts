@@ -26,7 +26,8 @@ export class PostPreviewComponent {
       email: '',
       createDate: '',
       profile: ''
-    }
+    },
+    images: []
   }]
 
   openPost(postId: string) {

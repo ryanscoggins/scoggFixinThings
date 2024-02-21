@@ -7,5 +7,6 @@ export interface Post {
   createDate: string;
   updateDate: string | null;
   publishDate: string | null;
-  author: User
+  author: User;
+  images: any[];
 }
