@@ -79,11 +79,16 @@
   border: none;
 }
 
-.center {
+.post {
   margin: auto;
-  width: 50%;
-  border: 3px solid black;
+  width: 75%;
   padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.post-content {
+  flex: 1;
 }
 
 .active .p-button {
