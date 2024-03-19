@@ -3,7 +3,7 @@
 @import "node_modules/primeng/resources/themes/lara-light-blue/theme.css";
 @import "node_modules/primeicons/primeicons.css";
 
-/* body {background-color:#364897;} */
+body {background-color:white;}
 
 .header {
     width: 100%;
@@ -28,10 +28,6 @@
   float: right;
   position: relative;
 }
-
-/* .p-menubar-root-list { */
-  /* overflow: visible; */
-/* } */
 
 .p-menubar.p-menubar-mobile-active .p-menubar-root-list {
   position:absolute;
@@ -61,7 +57,14 @@
 
 .p-button {
   color: black;
-  transition: color 0.1s
+  transition: color 0.5s;
+  background: none;
+}
+
+.p-button:enabled:hover {
+  background: #686868;
+  color: white;
+  transition: all 0.2s;
 }
 
 .header .p-button {
