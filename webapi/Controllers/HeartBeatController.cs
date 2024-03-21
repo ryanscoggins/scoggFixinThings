@@ -17,10 +17,10 @@ namespace webapi.Controllers
             _context = context;
         }
 
-        [HttpGet]
+        [HttpHead]
         public ActionResult CheckPulse()
         {
-            return Ok(true);
+            return Ok();
         }
     }
 }
