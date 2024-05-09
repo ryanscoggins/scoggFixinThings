@@ -13,10 +13,15 @@ export class HomeComponent {
   ) {};
   
   allPosts: Post[] = [];
+  loading: boolean = false;
+
 
   ngOnInit(): void {
-    this.postService.getPosts().subscribe((data) =>
-      this.allPosts = data
-    )
+    this.loading = true;
+    this.postService.getPosts().subscribe((data) => {
+      this.allPosts = data;
+      this.loading = false;
+    })
    }
+
 }

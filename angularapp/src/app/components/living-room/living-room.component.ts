@@ -11,7 +11,8 @@ export class LivingRoomComponent {
     private postService: PostService
   ) {}
 
-  posts: Post[] = [];
+    posts: Post[] = [];
+  loading: boolean = false;
 
   ngOnInit(): void {
     this.postService.getPostsByLocation('living').subscribe((data) =>

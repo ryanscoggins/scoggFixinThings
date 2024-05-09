@@ -11,7 +11,8 @@ export class KitchenComponent {
     private postService: PostService
   ) {}
 
-  posts: Post[] = [];
+    posts: Post[] = [];
+  loading: boolean = false;
 
   ngOnInit(): void {
     this.postService.getPostsByLocation('kitchen').subscribe((data) =>

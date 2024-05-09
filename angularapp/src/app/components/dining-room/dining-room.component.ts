@@ -11,7 +11,8 @@ export class DiningRoomComponent {
     private postService: PostService
   ) {}
 
-  posts: Post[] = [];
+    posts: Post[] = [];
+  loading: boolean = false;
 
   ngOnInit(): void {
     this.postService.getPostsByLocation('dining').subscribe((data) =>

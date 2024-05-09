@@ -11,7 +11,8 @@ export class OtherComponent {
     private postService: PostService
   ) {}
 
-  posts: Post[] = [];
+    posts: Post[] = [];
+  loading: boolean = false;
 
   ngOnInit(): void {
     this.postService.getPostsByLocation('Other').subscribe((data) =>

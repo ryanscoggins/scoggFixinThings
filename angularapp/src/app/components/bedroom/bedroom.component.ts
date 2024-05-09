@@ -12,10 +12,16 @@ export class BedroomComponent {
   ) {}
 
   posts: Post[] = [];
+  loading: boolean = false;
+
 
   ngOnInit(): void {
-    this.postService.getPostsByLocation('bedroom').subscribe((data) =>
+    this.loading = true;
+    this.postService.getPostsByLocation('bedroom').subscribe((data) => {
       this.posts = data
+      this.loading = false;
+    }
     )
   }
+
 }

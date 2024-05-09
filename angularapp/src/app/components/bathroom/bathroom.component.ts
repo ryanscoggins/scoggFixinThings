@@ -11,11 +11,16 @@ export class BathroomComponent {
     private postService: PostService
   ) {}
 
-  posts: Post[] = [];
+    posts: Post[] = [];
+  loading: boolean = false;
+
 
   ngOnInit(): void {
-    this.postService.getPostsByLocation('bathroom').subscribe((data) =>
-      this.posts = data
+    this.loading = true;
+    this.postService.getPostsByLocation('bathroom').subscribe((data) => {
+      this.posts = data;
+      this.loading = false;
+    }
     )
   }
 }
