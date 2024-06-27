@@ -5,7 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
-import { GalleriaModule } from 'primeng/galleria';
+import { CarouselModule } from 'primeng/carousel'
 import { MenubarModule } from 'primeng/menubar';
 
 //Components
@@ -52,7 +52,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
       {path: 'post/:postId', component: PostComponent}
     ]),
     //Imports
-    BrowserModule, HttpClientModule, ButtonModule, CardModule, GalleriaModule, MenubarModule, ProgressSpinnerModule
+    BrowserModule, HttpClientModule, ButtonModule, CardModule, MenubarModule, ProgressSpinnerModule, CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

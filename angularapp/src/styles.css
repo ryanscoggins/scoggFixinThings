@@ -141,3 +141,7 @@ body {background-color:#f0f0f0;}
     display:none
   }
 }
+
+.p-carousel-items-container {
+  align-items: center;
+}

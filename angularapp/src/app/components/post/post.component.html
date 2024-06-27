@@ -5,15 +5,10 @@
     <div [innerHTML]="post.content"></div>
 </div>
 <div class="post-content">
-    <p-galleria [value]="post.images" [showItemNavigators]="true" [containerStyle]="{ 'max-width': '100%' }" [numVisible]="5">
+    <p-carousel [value]="post.images" [numVisible]="3">
         <ng-template pTemplate="item" let-item>
             <img [src]="item.imageLink" style="max-width:100%"/>
         </ng-template>
-        <ng-template pTemplate="thumbnail" let-item class="background: none">
-            <div class="grid grid-nogutter justify-content-center">
-                <img width='100%' [src]="item.imageLink" />
-            </div>
-        </ng-template>
-    </p-galleria>
+    </p-carousel>
 </div>
 </div>
