@@ -18,6 +18,12 @@ body {background-color:#f0f0f0;}
     max-height: 100px;
   }
 
+.center-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .menu {
   width: 100%;
 }
