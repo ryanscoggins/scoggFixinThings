@@ -20,14 +20,14 @@ namespace webapi.Controllers
         [HttpGet]
         public List<Post> GetAllPosts()
         {
-            List<Post>? posts = _context.Posts.Include(p => p.Images).ToList();
+            List<Post>? posts = _context.Posts.Include(p => p.Images).OrderByDescending(x => x.CreateDate).ToList();
             return posts;
         }
 
         [HttpGet]
         public List<Post> GetPostsByLocation(string location)
         {
-            List<Post>? posts = _context.Posts.Where(p => p.Location == location).Include(p => p.Images).ToList();
+            List<Post>? posts = _context.Posts.Where(p => p.Location == location).OrderByDescending(x => x.CreateDate).Include(p => p.Images).ToList();
             return posts;
         }
 
