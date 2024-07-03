@@ -54,6 +54,7 @@ body {background-color:#f0f0f0;}
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  padding-top: 2rem;
 }
 
 .post-preview {
