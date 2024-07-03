@@ -5,7 +5,8 @@
                 {{post.summary.slice(0, 500)}}
                 <span *ngIf="post.summary.length>500"> ...</span>
             </p>
-            <div style="display: flex; justify-content: flex-end;">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                {{post.createDate | date}}
                 <p-button class="preview-button" (onClick)="openPost(post.id)">Read More</p-button>
             </div>
         </p-card>
