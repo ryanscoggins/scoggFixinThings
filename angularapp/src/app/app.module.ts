@@ -43,9 +43,9 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
     RouterModule.forRoot([
       {path: '', component: HomeComponent},
       {path: 'living', component: LivingRoomComponent},
-      {path: 'kitchen', component: KitchenComponent},
-      {path: 'bathroom', component: BathroomComponent},
-      {path: 'bedroom', component: BedroomComponent},
+      // {path: 'kitchen', component: KitchenComponent},
+      // {path: 'bathroom', component: BathroomComponent},
+      // {path: 'bedroom', component: BedroomComponent},
       {path: 'dining', component: DiningRoomComponent},
       {path: 'about', component: AboutComponent},
       {path: 'other', component: OtherComponent},

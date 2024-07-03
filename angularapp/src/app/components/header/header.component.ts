@@ -18,26 +18,26 @@ export class HeaderComponent {
       routerLink: "/living",
       routerLinkActiveOptions: "active"
     },
-    {
-      label: "Kitchen",
-      routerLink: "/kitchen",
-      routerLinkActiveOptions: "active"
-    },
-    {
-      label: "Bathroom",
-      routerLink: "/bathroom",
-      routerLinkActiveOptions: "active"
-    },
+    // {
+    //   label: "Kitchen",
+    //   routerLink: "/kitchen",
+    //   routerLinkActiveOptions: "active"
+    // },
+    // {
+    //   label: "Bathroom",
+    //   routerLink: "/bathroom",
+    //   routerLinkActiveOptions: "active"
+    // },
     {
       label: "Dining Room",
       routerLink: "/dining",
       routerLinkActiveOptions: "active"
     },
-    {
-      label: "Bedroom",
-      routerLink: "/bedroom",
-      routerLinkActiveOptions: "active"
-    },
+    // {
+    //   label: "Bedroom",
+    //   routerLink: "/bedroom",
+    //   routerLinkActiveOptions: "active"
+    // },
     {
       label: "Other",
       routerLink: "/other",
