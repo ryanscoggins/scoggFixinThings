@@ -1,14 +1,14 @@
 <div class='post'>
     <div class="post-content">
-    <h1>{{post.title}}</h1>
-    <h3>{{post.summary}}</h3>
-    <div [innerHTML]="post.content"></div>
-</div>
-<div *ngIf="post.images.length > 0" class="post-content">
-    <p-carousel [value]="post.images" [numVisible]="2">
-        <ng-template pTemplate="item" let-item>
-            <img [src]="item.imageLink" style="max-width:100%; padding: 5px"/>
-        </ng-template>
-    </p-carousel>
-</div>
+        <h1>{{post.title}}</h1>
+        <h3>{{post.summary}}</h3>
+        <div *ngIf="post.images.length > 0" class="post-content">
+            <p-carousel [value]="post.images" [numVisible]="2">
+                <ng-template pTemplate="item" let-item>
+                    <img [src]="item.imageLink" style="max-width:100%; padding: 5px"/>
+                </ng-template>
+            </p-carousel>
+        </div>
+        <div [innerHTML]="post.content"></div>
+    </div>
 </div>
