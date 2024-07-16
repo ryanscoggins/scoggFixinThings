@@ -22,6 +22,7 @@ import { HomeComponent } from './components/home/home.component';
 import { PostPreviewComponent } from './components/post-preview/post-preview.component';
 import { PostComponent } from './components/post/post.component'
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { AllPostsComponent } from './components/all-posts/all-posts.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
     HomeComponent,
     PostPreviewComponent,
     PostComponent,
+    AllPostsComponent,
   ],
   imports: [
     //Router
@@ -49,6 +51,7 @@ import { ProgressSpinnerModule } from 'primeng/progressspinner';
       {path: 'dining', component: DiningRoomComponent},
       {path: 'about', component: AboutComponent},
       {path: 'other', component: OtherComponent},
+      {path: 'all', component: AllPostsComponent},
       {path: 'post/:postId', component: PostComponent}
     ]),
     //Imports
